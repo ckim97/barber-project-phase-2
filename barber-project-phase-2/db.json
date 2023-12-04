@@ -1,0 +1,73 @@
+{
+    "barbershops": [
+        {   "id": 1,
+            "name" : "SuperCuts",
+            "services" : {
+                "First Time" : 50,
+                "Haircut" : 30,
+                "Kid's Haircut" : 20,
+                "Beard Trim" : 15,
+                "Haircut and Beard Trim" : 40
+            }
+            
+        },
+        {   "id": 2,
+            "name" : "HairCuts",
+            "services" : {
+                "First Time" : 50,
+                "Haircut" : 30,
+                "Kid's Haircut" : 20,
+                "Beard Trim" : 15,
+                "Haircut and Beard Trim" : 40
+            }
+
+    }
+            
+    ],
+
+
+    "barbers": [
+        {
+            "id":1,
+            "name": "Max",
+            "barbershopId": 2
+        },
+        {
+            "id":2,
+            "name": "Jason",
+            "barbershopId": 2
+        },
+        {
+            "id":1,
+            "name": "Peter",
+            "barbershopId": 1
+        },
+        {
+            "id":1,
+            "name": "Avi",
+            "barbershopId": 2
+        }
+    ],
+
+
+    "users": [
+        {
+            "id": 1,
+            "name": "Kenneth"
+        }
+    ],
+
+
+    "appointments": [
+        {
+            "id": 1,
+            "time": "9:30am",
+            "data": "12/05/2023",
+            "userId": 1,
+            "barbershopId": 2,
+            "barberId": 2
+        }
+    ]
+
+
+}

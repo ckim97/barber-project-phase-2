@@ -1,0 +1,3 @@
+{
+    "/barbershops/:id" : "barbershops/:id?_embed=barbers"
+}
