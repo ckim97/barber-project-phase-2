@@ -1,27 +1,33 @@
 import React, { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 import SearchBar from "./components/SearchBar";
 import NavBar from "./components/NavBar";
+import Card from "./components/Card";
+import ProfileBar from "./components/ProfileBar";
+import Profile from './Profile';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [barbershops, setBarbershops] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:4000/barbershops")
       .then(r => r.json())
-      .then(data => console.log(data))
-  })
+      .then(data => setBarbershops(data))
+  },[])
+
+  const renderBarbershops = barbershops.map((barbershop) => <Card key={barbershop.id} barbershop={barbershop}/>)
 
 
   return (
     <>
-      <header>
+      <header className="header">
         <NavBar/>
+        <ProfileBar/>
       </header>
-      <main>
-        <h1>Barber Project</h1>      
+        <h1>Slice</h1>  
+      <main className="container">
+        {renderBarbershops}
       </main>
     </>
   )

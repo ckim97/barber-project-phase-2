@@ -8,9 +8,7 @@ import "./NavBar.css";
 function NavBar() {
   return (
     <nav>
-      <NavLink to="/" className="nav-link">Home</NavLink>
-      <NavLink to="/barbershops" className="nav-link">Barbershops</NavLink>
-      <NavLink to="/profile" className="nav-link">My Profile</NavLink>
+      <NavLink to="/" className="nav-link">Slice</NavLink>
     </nav>
   );
 };

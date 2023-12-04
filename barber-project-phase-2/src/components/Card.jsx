@@ -1,0 +1,14 @@
+import React from 'react'
+
+function Card({barbershop}) {
+    
+    return (
+      <article  className="item">
+          <h2>{barbershop.name}</h2>
+          <h3>Rating: {barbershop.rating}</h3>
+          <img src={barbershop.image}/>
+      </article>
+    )
+  }
+  
+  export default Card

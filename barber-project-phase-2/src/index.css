@@ -66,3 +66,34 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px; /* Add padding to the container to ensure elements fit within the border */
+  box-sizing: border-box; /* Include padding in the box model */
+  
+}
+
+.item {
+  display: flex;
+  flex-direction: column; /* Optional: If you want to stack elements vertically */
+  justify-content: center;
+  align-items: center;
+  border: 5px solid black;
+  width: 400px; /* Set a fixed width for each item */
+  height: 400px; /* Set the same height as the width to make it a square */
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; /* Adjust as needed */
+  background-color: #f0f0f0; /* Example background color */
+}
