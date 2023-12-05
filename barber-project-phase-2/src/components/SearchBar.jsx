@@ -3,8 +3,8 @@ import React from 'react'
 function SearchBar({search, setSearch}) {
 
     function handleSearch(e) {
-        setSearch(e.target.value)
-    }
+        setSearch(e.target.value);
+    };
 
     return (
         <div>
