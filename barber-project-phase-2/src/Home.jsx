@@ -29,7 +29,6 @@ function Home() {
         })
       },[]);
 
-      console.log(barbershops)
 
 
     const searchedBarbershops = barbershops.filter((barbershop) => barbershop.name.toLowerCase().includes(search.toLowerCase()));

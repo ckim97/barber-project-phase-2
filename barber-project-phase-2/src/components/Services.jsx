@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import ServicesCard from "./ServicesCard";
+import Cart from "./Cart";
 
 function Services() {
 
@@ -9,13 +10,35 @@ const [service, setService] = useState('');
 const [price, setPrice] = useState('');
 
     const { id } = useParams();
-    console.log(id);
+    const location = useLocation();
+
+    const barberShop = location.state.clickedBarberShop;
+    const barber = location.state.clickedBarber
+    
 
     useEffect(() => {
         fetch(`http://localhost:4000/barbershops/${id}`)
           .then((res) => res.json())
           .then((data) => setServices(data));
-      }, []);
+      }, [id]);
+
+      useEffect(() => {
+        console.log("Updated Service:", service);
+        console.log("Updated Price:", price);
+        
+    }, [services, service, price]);
+    
+    function handleChange(name, price1) {
+        const serviceName = name;
+        const servicePrice = price1
+        setService(serviceName);
+        setPrice(servicePrice);
+    }
+    // console.log('hi');
+    // console.log(service);
+    // console.log('bye')
+    // console.log(price);
+    
     // useEffect(() => {
     //     const fetchData = async () => {
     //         try {
@@ -31,10 +54,7 @@ const [price, setPrice] = useState('');
     //     fetchData();
     // }, [id]);
 
-
-    console.log(services)
-      console.log('hi')
-    // const serviceElements = for(service in services.service) {
+    // const serviceElements = for(service in services.service) 
     //     return(
 
     //     )
@@ -49,12 +69,10 @@ const [price, setPrice] = useState('');
 
             {/* <ServicesCard /> */}
             <ul>
-                {Object.entries(services.services).map(([serviceName, price]) => (
-                    <li key={serviceName}>
-                    {`${serviceName}: $${price}`}
-                    </li>
-
-            ))}
+                        {Object.entries(services.services).map(([serviceName, price2]) => (
+                            <ServicesCard serviceName={serviceName} price={price2} handleChange={handleChange}/>
+                        ))}
+                        <Cart service={service} price={price} barberShop={barberShop} barber={barber}/>
             </ul>
 
         </div>

@@ -3,13 +3,19 @@ import { useParams, useLocation } from "react-router-dom";
 import BarberCard from "./BarberCard";
 
 function BarberDetails() {
+
+    // const location = useLocation();
     const { id } = useParams();
 
-    const { state } = useLocation();
+    const location = useLocation();
 
     const [barbers, setBarbers] = useState([]);
 
+    const [clickedBarber, setClickedBarber] = useState('');
 
+    const barberShop = location.state.bbshop;
+
+    // console.log(barbers)
     useEffect(() => {
         fetch(`http://localhost:4000/barbershop/${id}/barbers`)
           .then((res) => res.json())
@@ -17,14 +23,13 @@ function BarberDetails() {
       }, []);
     //   console.log(data);
 
-    console.log(barbers);
 
     return (
         <div>
         <p>Choose a Professional</p>
         <main className="container">
             {barbers.map((barber => (
-                <BarberCard id={barber.id} barber={barber} index={barber.barbershopId}/>
+                <BarberCard key={barber.id} barber={barber} index={barber.barbershopId} barberShop={barberShop} />
             )))}         
           </main>
         </div>
