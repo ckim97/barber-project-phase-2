@@ -38,7 +38,7 @@ function Home() {
 
     return (
         <>
-          <main className="container">
+          <main className="card-container">
             {renderBarbershops}
           </main>
         </>

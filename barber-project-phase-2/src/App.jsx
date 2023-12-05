@@ -18,21 +18,13 @@ function App() {
     <>
       <header className="header">
         <NavBar/>
-        <ProfileBar/>
-        {
-          isSearch ? 
-          <SearchBar
-              search={search}
-              setSearch={setSearch}
-          />
-          :
-          null
-        }
-
       </header>
-        <h1>Slice</h1>  
       <main className="container">
+        <h1>Slice</h1>  
+        <div className='contents'>
+
         <Outlet context={{search, setIsSearch}}/>
+        </div>
       </main>
     </>
   )

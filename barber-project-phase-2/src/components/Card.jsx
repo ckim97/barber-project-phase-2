@@ -18,7 +18,7 @@ function Card({barbershop, navigate}) {
   console.log('res')
     return (
       // <article  className="item" onClick={() => navigate(`/barbershop/${barbershop.id}/barbers`,{clickedBarberShop}) }>
-      <article className="item" onClick={() => { 
+      <article className="card-item" onClick={() => { 
         handleClick();
       }}>
       {/* // setClickedBarberShop(barbershop.name);

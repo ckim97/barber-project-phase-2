@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from "react";
+import { useOutletContext } from "react-router-dom";
 
 function Profile() {
 
     const [user, setUser] = useState({})
     const [appointment, setAppointment] = useState({})
 
+    const {search, setIsSearch} = useOutletContext();
+
     useEffect(() => {
+        setIsSearch(false)
         fetch("http://localhost:4000/users/1")
           .then((res) => res.json())
           .then((data) => setUser(data));

@@ -1,3 +1,6 @@
+import React from 'react'
+
+
 function Cart( {service, price, barberShop, barber} ) {
     return (
         <div>
