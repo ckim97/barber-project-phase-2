@@ -18,15 +18,6 @@ function App() {
     <>
       <header className="header">
         <NavBar/>
-        {/* {
-          isSearch ? 
-          <SearchBar
-              search={search}
-              setSearch={setSearch}
-          />
-          :
-          null
-        } */}
       </header>
       <main className="container">
         <h1>Slice</h1>  
