@@ -25,12 +25,6 @@ function Home() {
 
     return (
         <>
-          <header className="header">
-            <NavBar/>
-            <ProfileBar/>
-            <SearchBar/>
-          </header>
-            <h1>Slice</h1>  
           <main className="container">
             {renderBarbershops}
           </main>
