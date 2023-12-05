@@ -18,7 +18,7 @@ function App() {
     <>
       <header className="header">
         <NavBar/>
-        {
+        {/* {
           isSearch ? 
           <SearchBar
               search={search}
@@ -26,12 +26,14 @@ function App() {
           />
           :
           null
-        }
-        <ProfileBar/>
+        } */}
       </header>
-        <h1>Slice</h1>  
       <main className="container">
+        <h1>Slice</h1>  
+        <div className='contents'>
+
         <Outlet context={{search, setIsSearch}}/>
+        </div>
       </main>
     </>
   )
