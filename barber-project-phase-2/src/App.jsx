@@ -8,16 +8,25 @@ import ProfileBar from "./components/ProfileBar";
 import { Outlet } from "react-router-dom";
 
 function App() {
+
+  const [search, setSearch] = useState("");
+  
+  
+
   return (
     <>
       <header className="header">
         <NavBar/>
         <ProfileBar/>
-        <SearchBar/>
+        <SearchBar
+            search={search}
+            setSearch={setSearch}
+        />
+
       </header>
         <h1>Slice</h1>  
       <main className="container">
-        <Outlet/>
+        <Outlet context={search}/>
       </main>
     </>
   )
