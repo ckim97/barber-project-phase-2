@@ -97,3 +97,54 @@ button:focus-visible {
   padding: 10px; /* Adjust as needed */
   background-color: #f0f0f0; /* Example background color */
 }
+
+/* .barber-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 5px solid black;
+  width: 30vw; 
+  height: 35vh;
+  box-sizing: border-box;
+  margin: 5px;
+}
+
+.barber-card p {
+  text-align: center;
+  
+  width: 80%;
+  box-sizing: border-box;
+}
+
+.barber-card img {
+  display: flex;
+  
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+} */
+.barber-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid black;
+  box-sizing: border-box;
+  margin: 5px;
+  overflow: hidden; /* Ensure that overflowing content is hidden */
+  width: 30vw; /* Adjust as needed */
+  max-height: 35vh; /* Set a maximum height to the container */
+}
+
+.barber-card p {
+  text-align: center;
+  margin: 0; /* Remove default margin */
+  width: 80%; /* Adjust as needed */
+}
+
+.barber-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensure the image fits within the container without being cut off */
+}
+

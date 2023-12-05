@@ -4,7 +4,7 @@ import ServicesCard from "./ServicesCard";
 
 function Services() {
 
-const [services, setServices] = useState({ services: {} })
+const [barbershopServices, setBarbershopServices] = useState({ services: {} })
 const [service, setService] = useState('');
 const [price, setPrice] = useState('');
 
@@ -14,7 +14,10 @@ const [price, setPrice] = useState('');
     useEffect(() => {
         fetch(`http://localhost:4000/barbershops/${id}`)
           .then((res) => res.json())
-          .then((data) => setServices(data));
+          .then((data) => {
+            console.log(data);
+            setBarbershopServices(data)
+        });
       }, []);
     // useEffect(() => {
     //     const fetchData = async () => {
@@ -32,7 +35,7 @@ const [price, setPrice] = useState('');
     // }, [id]);
 
 
-    console.log(services)
+    console.log(barbershopServices)
       console.log('hi')
     // const serviceElements = for(service in services.service) {
     //     return(
@@ -42,19 +45,9 @@ const [price, setPrice] = useState('');
     return (
         <div>
             <p>Select a Service:</p>
-            {/* {services.map((service => (
-                <ServicesCard service={services}/>
-            )))} */}
-            {/* {serviceElements} */}
 
-            {/* <ServicesCard /> */}
             <ul>
-                {Object.entries(services.services).map(([serviceName, price]) => (
-                    <li key={serviceName}>
-                    {`${serviceName}: $${price}`}
-                    </li>
-
-            ))}
+                {/* {Object.entries(barbershopServices.services).map((barbershopService) => <ServicesCard key={barbershopService.id barbershopService={barbershopService}} />)} */}
             </ul>
 
         </div>

@@ -1,7 +1,7 @@
-function ServicesCard( {service} ) {
+function ServicesCard( {barbershopService} ) {
     return (
-      <li key={serviceName}>
-        {`${serviceName}: $${price}`}
+      <li >
+        {`${barbershopService.name}: $${barbershopService.price}`}
       </li>
     )
 }
