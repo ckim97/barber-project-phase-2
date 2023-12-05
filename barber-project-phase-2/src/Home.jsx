@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import Card from "./components/Card";
 import ProfileBar from "./components/ProfileBar";
 import BarberDetails from './components/BarberDetails';
+import { Outlet, useOutletContext } from "react-router-dom";
 
 import { useNavigate } from "react-router-dom";
 
@@ -15,13 +16,25 @@ function Home() {
     const [barbershops, setBarbershops] = useState([]);
     const navigate = useNavigate();
 
+    const search = useOutletContext();
+
+    console.log(search)
+
     useEffect(() => {
         fetch("http://localhost:4000/barbershops")
           .then(r => r.json())
-          .then(data => setBarbershops(data))
-      },[])
+          .then(data => {
+            console.log(data)
+            setBarbershops(data)
+        })
+      },[]);
 
-    const renderBarbershops = barbershops.map((barbershop) => <Card navigate={navigate} key={barbershop.id} barbershop={barbershop}/>);
+      console.log(barbershops)
+
+
+    const searchedBarbershops = barbershops.filter((barbershop) => barbershop.name.toLowerCase().includes(search.toLowerCase()));
+
+    const renderBarbershops = searchedBarbershops.map((barbershop) => <Card navigate={navigate} key={barbershop.id} barbershop={barbershop}/>);
 
     return (
         <>
