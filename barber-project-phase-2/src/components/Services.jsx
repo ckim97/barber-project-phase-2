@@ -10,6 +10,8 @@ const [service, setService] = useState('');
 const [price, setPrice] = useState('');
 
     const { id } = useParams();
+
+    console.log(id)
     const location = useLocation();
 
     const barberShop = location.state.clickedBarberShop;
@@ -19,15 +21,10 @@ const [price, setPrice] = useState('');
     useEffect(() => {
         fetch(`http://localhost:4000/barbershops/${id}`)
           .then((res) => res.json())
-          .then((data) => setServices(data));
-      }, [id]);
+          .then((data) => setBarbershopServices(data));
+      }, []);
 
-      useEffect(() => {
-        console.log("Updated Service:", service);
-        console.log("Updated Price:", price);
-        
-    }, [services, service, price]);
-    
+  
     function handleChange(name, price1) {
         const serviceName = name;
         const servicePrice = price1
@@ -59,15 +56,18 @@ const [price, setPrice] = useState('');
 
     //     )
     // }
+    console.log('no')
+    console.log(barbershopServices.services)
+    console.group('yes')
     return (
         <div>
             <p>Select a Service:</p>
 
             <ul>
-                        {Object.entries(services.services).map(([serviceName, price2]) => (
-                            <ServicesCard serviceName={serviceName} price={price2} handleChange={handleChange}/>
-                        ))}
-                        <Cart service={service} price={price} barberShop={barberShop} barber={barber}/>
+                {Object.entries(barbershopServices.services).map(([serviceName, price]) => (
+                <ServicesCard handleChange={handleChange} key={serviceName} serviceName={serviceName} price={price} />
+                ))}
+                <Cart service={service} price={price} barberShop={barberShop} barber={barber}/>
             </ul>
 
         </div>

@@ -1,9 +1,5 @@
 import { useNavigate } from "react-router-dom";
-<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
-=======
-import React from "react";
->>>>>>> origin/main
 
 function BarberCard({barber, index, key, barberShop}) {
 
@@ -28,15 +24,5 @@ function BarberCard({barber, index, key, barberShop}) {
     }
 
 
-<<<<<<< HEAD
-=======
-    return (
-        <article className="barber-card" onClick={() => navigate(`/barbershop/${index}/services`)}>
-            <p>{barber.name}</p>
-            <img src={barber.image}/>
-        </article>
-    )
-}
->>>>>>> origin/main
 
 export default BarberCard
