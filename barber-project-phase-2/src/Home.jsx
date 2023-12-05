@@ -5,10 +5,15 @@ import SearchBar from "./components/SearchBar";
 import NavBar from "./components/NavBar";
 import Card from "./components/Card";
 import ProfileBar from "./components/ProfileBar";
+import BarberDetails from './components/BarberDetails';
+
+import { useNavigate } from "react-router-dom";
+
 
 
 function Home() {
     const [barbershops, setBarbershops] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetch("http://localhost:4000/barbershops")
@@ -16,7 +21,7 @@ function Home() {
           .then(data => setBarbershops(data))
       },[])
 
-    const renderBarbershops = barbershops.map((barbershop) => <Card key={barbershop.id} barbershop={barbershop}/>);
+    const renderBarbershops = barbershops.map((barbershop) => <Card navigate={navigate} key={barbershop.id} barbershop={barbershop}/>);
 
     return (
         <>

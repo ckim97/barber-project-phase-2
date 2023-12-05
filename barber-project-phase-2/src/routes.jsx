@@ -3,6 +3,7 @@ import App from "./App.jsx";
 import Barbershop from "./Barbershop.jsx";
 import Profile from "./Profile.jsx";
 import Home from "./Home.jsx";
+import BarberDetails from './components/BarberDetails';
 
 
 const routes = [
@@ -25,7 +26,12 @@ const routes = [
             path: "/profile",
             element: <Profile />,
             errorElement: <h1>Something went wrong!</h1>
-        }
+        },
+        {
+          path: "/barbershop/:id/barbers",
+          element: <BarberDetails />,
+          errorElement: <h1>Something went wrong!</h1>
+        },
       ]
     }
   ]
