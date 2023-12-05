@@ -18,7 +18,6 @@ function App() {
     <>
       <header className="header">
         <NavBar/>
-        <ProfileBar/>
         {
           isSearch ? 
           <SearchBar
@@ -28,7 +27,7 @@ function App() {
           :
           null
         }
-
+        <ProfileBar/>
       </header>
         <h1>Slice</h1>  
       <main className="container">

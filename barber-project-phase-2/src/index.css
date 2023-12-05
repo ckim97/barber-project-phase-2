@@ -11,48 +11,16 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 0 !important;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -67,28 +35,48 @@ button:focus-visible {
   }
 }
 
-.container {
+ .container {
+  margin: 0 2vw;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #f9f9f9; /* Set a slightly different white color */
+}
+
+.card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  padding: 10px; /* Add padding to the container to ensure elements fit within the border */
-  box-sizing: border-box; /* Include padding in the box model */
-  
 }
 
-.item {
-  display: flex;
-  flex-direction: column; /* Optional: If you want to stack elements vertically */
-  justify-content: center;
-  align-items: center;
-  border: 5px solid black;
-  width: 400px; /* Set a fixed width for each item */
-  height: 400px; /* Set the same height as the width to make it a square */
+.card-item {
+  border: 5px solid #f9f9f9; /* Set the border color to a slightly different white */
+  margin: 1vw;
+  width: calc(33.33% - 4vw);
+  height: 45vh;
   box-sizing: border-box;
-  padding: 5px;
+  overflow: hidden;
+  position: relative;
+  background-color: white; /* Set the background color to white */
+  transition: background-color 0.3s ease;
+  border-radius: 35px;
 }
+
+.card-item:hover {
+  background-color: #f9f9f9; /* Change to a slightly different white on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a box shadow on hover for a raised effect */
+}
+
+.card-item img {
+  width: 90%;
+  height: 60%;
+  object-fit: contain;
+}
+ 
+
+
+
 
 .header {
   display: flex;
@@ -96,34 +84,9 @@ button:focus-visible {
   align-items: center;
   padding: 10px; /* Adjust as needed */
   background-color: #f0f0f0; /* Example background color */
-}
-
-/* .barber-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  border: 5px solid black;
-  width: 30vw; 
-  height: 35vh;
-  box-sizing: border-box;
-  margin: 5px;
-}
-
-.barber-card p {
-  text-align: center;
   
-  width: 80%;
-  box-sizing: border-box;
 }
 
-.barber-card img {
-  display: flex;
-  
-  width: 100%;
-  height: auto;
-  box-sizing: border-box;
-} */
 .barber-card {
   display: flex;
   flex-direction: column;
