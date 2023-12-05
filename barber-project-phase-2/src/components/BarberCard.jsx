@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
 
-function BarberCard({barber}) {
+function BarberCard({barber, index}) {
 
     const navigate = useNavigate();
 
     return (
-        <article onClick={() => navigate(`/barbershop/${barber.id}/services`)}>
+        <article onClick={() => navigate(`/barbershop/${index}/services`)}>
             <p>{barber.name}</p>
         </article>
     )

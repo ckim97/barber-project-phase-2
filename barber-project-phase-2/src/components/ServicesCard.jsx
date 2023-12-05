@@ -1,8 +1,8 @@
 function ServicesCard( {service} ) {
     return (
-        <article>
-          <h2>{service}</h2>
-      </article>
+      <li key={serviceName}>
+        {`${serviceName}: $${price}`}
+      </li>
     )
 }
 

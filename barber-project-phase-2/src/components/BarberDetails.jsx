@@ -24,7 +24,7 @@ function BarberDetails() {
         <p>Choose a Professional</p>
         <main className="container">
             {barbers.map((barber => (
-                <BarberCard barber={barber}/>
+                <BarberCard id={barber.id} barber={barber} index={barber.barbershopId}/>
             )))}         
           </main>
         </div>
