@@ -8,7 +8,7 @@ import "./NavBar.css";
 function NavBar() {
   return (
     <nav>
-      <NavLink to="/" className="nav-link">Slice</NavLink>
+      <NavLink to="/home" className="nav-link">Slice</NavLink>
     </nav>
   );
 };
