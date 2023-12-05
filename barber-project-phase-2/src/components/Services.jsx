@@ -5,7 +5,7 @@ import Cart from "./Cart";
 
 function Services() {
 
-const [services, setServices] = useState({ services: {} })
+const [barbershopServices, setBarbershopServices] = useState({ services: {} })
 const [service, setService] = useState('');
 const [price, setPrice] = useState('');
 
@@ -62,12 +62,7 @@ const [price, setPrice] = useState('');
     return (
         <div>
             <p>Select a Service:</p>
-            {/* {services.map((service => (
-                <ServicesCard service={services}/>
-            )))} */}
-            {/* {serviceElements} */}
 
-            {/* <ServicesCard /> */}
             <ul>
                         {Object.entries(services.services).map(([serviceName, price2]) => (
                             <ServicesCard serviceName={serviceName} price={price2} handleChange={handleChange}/>

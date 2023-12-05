@@ -42,7 +42,7 @@
         {   "id": 4,
             "name" : "AmazingCuts",
             "rating" : "4/5",
-            "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHpmCHtAEnJ6-RaSw-nCT7T1dQBZVwA-8Kqw&usqp=CAU",
+            "image" : "https://clipart.com/thumbs.php?f=/706/batch_28/000706-0028-000001_tnb.png",
             "services" : {
                 "First Time" : 50,
                 "Haircut" : 30,
@@ -55,7 +55,7 @@
         {   "id": 5,
             "name" : "UltraCuts",
             "rating" : "4/5",
-            "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHpmCHtAEnJ6-RaSw-nCT7T1dQBZVwA-8Kqw&usqp=CAU",
+            "image" : "https://clipart.com/thumbs.php?f=/156/batch_28/000156-0028-001046_tnb.png",
             "services" : {
                 "First Time" : 50,
                 "Haircut" : 30,
@@ -68,7 +68,59 @@
         {   "id": 6,
             "name" : "RidiculousCuts",
             "rating" : "4/5",
-            "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHpmCHtAEnJ6-RaSw-nCT7T1dQBZVwA-8Kqw&usqp=CAU",
+            "image" : "https://clipart.com/thumbs.php?f=/176/batch_21/000176-0021-003575_tnb.png",
+            "services" : {
+                "First Time" : 50,
+                "Haircut" : 30,
+                "Kid's Haircut" : 20,
+                "Beard Trim" : 15,
+                "Haircut and Beard Trim" : 40
+            }
+
+        },
+        {   "id": 7,
+            "name" : "Beautiful Hair",
+            "rating" : "5/5",
+            "image" : "https://clipart.com/thumbs.php?f=/701/batch_01/000701-0001-002990_tnb.png",
+            "services" : {
+                "First Time" : 50,
+                "Haircut" : 30,
+                "Kid's Haircut" : 20,
+                "Beard Trim" : 15,
+                "Haircut and Beard Trim" : 40
+            }
+
+        },
+        {   "id": 8,
+            "name" : "Hair Care",
+            "rating" : "3/5",
+            "image" : "https://clipart.com/thumbs.php?f=/100/batch_128/000100-0128-000478_tnb.png",
+            "services" : {
+                "First Time" : 50,
+                "Haircut" : 30,
+                "Kid's Haircut" : 20,
+                "Beard Trim" : 15,
+                "Haircut and Beard Trim" : 40
+            }
+
+        },
+        {   "id": 9,
+            "name" : "Cuts4You",
+            "rating" : "4/5",
+            "image" : "https://clipart.com/thumbs.php?f=/156/batch_28/000156-0028-000782_tnb.png",
+            "services" : {
+                "First Time" : 50,
+                "Haircut" : 30,
+                "Kid's Haircut" : 20,
+                "Beard Trim" : 15,
+                "Haircut and Beard Trim" : 40
+            }
+
+        },
+        {   "id": 10,
+            "name" : "Fresh Cuts",
+            "rating" : "1/5",
+            "image" : "https://clipart.com/thumbs.php?f=/781/batch_11/000781-0011-000077_tnb.png",
             "services" : {
                 "First Time" : 50,
                 "Haircut" : 30,
@@ -86,27 +138,62 @@
         {
             "id": 1,
             "name": "Max",
+            "image": "https://clipart.com/thumbs.php?f=/773/batch_30/000773-0030-000340_tnb.png",
             "barbershopId": 2
         },
         {
             "id": 2,
             "name": "Jason",
+            "image": "https://clipart.com/thumbs.php?f=/773/batch_30/000773-0030-000325_tnb.png",
             "barbershopId": 2
         },
         {
             "id": 3,
             "name": "Peter",
+            "image": "https://clipart.com/thumbs.php?f=/773/batch_30/000773-0030-000120_tnb.png",
             "barbershopId": 1
         },
         {
             "id": 4,
             "name": "Avi",
+            "image": "https://clipart.com/thumbs.php?f=/773/batch_30/000773-0030-000124_tnb.png",
             "barbershopId": 2
         },
         {
             "id": 5,
             "name": "Albert",
+            "image": "https://clipart.com/thumbs.php?f=/773/batch_30/000773-0030-000261_tnb.png",
             "barbershopId": 3
+        },
+        {
+            "id": 5,
+            "name": "Sal",
+            "image": "https://clipart.com/thumbs.php?f=/773/batch_30/000773-0030-000233_tnb.png",
+            "barbershopId": 4
+        },
+        {
+            "id": 6,
+            "name": "Rob",
+            "image": "https://clipart.com/thumbs.php?f=/773/batch_30/000773-0030-000133_tnb.png",
+            "barbershopId": 5
+        },
+        {
+            "id": 7,
+            "name": "Greg",
+            "image": "https://clipart.com/thumbs.php?f=/773/batch_30/000773-0030-000215_tnb.png",
+            "barbershopId": 6
+        },
+        {
+            "id": 8,
+            "name": "Ronald",
+            "image": "https://clipart.com/thumbs.php?f=/773/batch_30/000773-0030-000098_tnb.png",
+            "barbershopId": 7
+        },
+        {
+            "id": 9,
+            "name": "Joseph",
+            "image": "https://clipart.com/thumbs.php?f=/773/batch_30/000773-0030-000265_tnb.png",
+            "barbershopId": 8
         }
     ],
 
