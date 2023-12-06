@@ -47,6 +47,7 @@ h1 {
 }
 
 .services-item {
+  list-style-type: none; 
   border: 5px solid #f9f9f9;
   background-color: white;
   border-radius: 35px;

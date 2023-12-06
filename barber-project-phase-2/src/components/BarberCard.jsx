@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 
-function BarberCard({barber, index, key, barberShop}) {
+function BarberCard({barber, index, barberShop}) {
 
     const navigate = useNavigate();
     const [clickedBarber, setClickedBarber] = useState('');

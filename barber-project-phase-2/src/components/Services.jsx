@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import ServicesCard from "./ServicesCard";
 import Cart from "./Cart";
+import Calendar from 'react-calendar'; 
 
 function Services() {
 
 const [barbershopServices, setBarbershopServices] = useState({ services: {} })
 const [service, setService] = useState('');
 const [price, setPrice] = useState('');
+const [date, setDate] = useState(new Date());
 
     const { id } = useParams();
 
@@ -31,34 +33,11 @@ const [price, setPrice] = useState('');
         setService(serviceName);
         setPrice(servicePrice);
     }
-    // console.log('hi');
-    // console.log(service);
-    // console.log('bye')
-    // console.log(price);
     
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         try {
-    //             const response = await fetch(`http://localhost:4000/barbershops/${id}`);
-    //             const data = await response.json();
-    //             setServices(data);
-    //             console.log('Data from API:', data);
-    //         } catch (error) {
-    //             console.error('Error fetching data:', error);
-    //         }
-    //     };
-
-    //     fetchData();
-    // }, [id]);
-
-    // const serviceElements = for(service in services.service) 
-    //     return(
-
-    //     )
-    // }
     console.log('no')
     console.log(barbershopServices.services)
     console.group('yes')
+    
       return (
         <div className="services-container">
           <div className="services-list">
@@ -67,6 +46,14 @@ const [price, setPrice] = useState('');
               <ServicesCard handleChange={handleChange} key={serviceName} serviceName={serviceName} price={price} />
             ))}
           </div>
+          <div>
+            <div className="calendar-container">
+              <Calendar onChange={setDate} value={date}/>
+            </div>
+              <div className="text-center">
+                Selected date: {date.toDateString()}
+              </div>
+          </div>
           <div className="cart">
             <ul>
               <Cart service={service} price={price} barberShop={barberShop} barber={barber}/>
@@ -74,19 +61,6 @@ const [price, setPrice] = useState('');
           </div>
         </div>
       );
-    
-    // return (
-    //     <div className="services-container">
-    //         <p>Select a Service:</p>
-    //         {Object.entries(barbershopServices.services).map(([serviceName, price]) => (
-    //             <ServicesCard handleChange={handleChange} key={serviceName} serviceName={serviceName} price={price} />
-    //             ))}
-    //         <ul>
-    //             <Cart service={service} price={price} barberShop={barberShop} barber={barber}/>
-    //         </ul>
-
-    //     </div>
-    // )
 }
 
 export default Services
