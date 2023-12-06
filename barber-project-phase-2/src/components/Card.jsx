@@ -1,13 +1,17 @@
 import React from 'react'
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import BarberDetails from './BarberDetails';
+import { Outlet, useOutletContext } from "react-router-dom";
 
 
 function Card({barbershop, navigate}) {
 
   const [clickedBarberShop, setClickedBarberShop] = useState('');
 
+  const {search, setIsSearch} = useOutletContext();
+
   function handleClick() {
+    setIsSearch(false);
     const currentName = barbershop.name;
     // console.log(currentName)
     setClickedBarberShop(currentName);

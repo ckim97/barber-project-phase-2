@@ -20,7 +20,7 @@ function App() {
         <NavBar isSearch={isSearch} search={search} setSearch={setSearch}/>
       </header>
       <main className="container">
-        <h1>Slice</h1>  
+        {/* <h1>Slice</h1>   */}
         <div className='contents'>
 
         <Outlet context={{search, setIsSearch}}/>

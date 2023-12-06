@@ -34,7 +34,7 @@ function Home() {
 
     const searchedBarbershops = barbershops.filter((barbershop) => barbershop.name.toLowerCase().includes(search.toLowerCase()));
 
-    const renderBarbershops = searchedBarbershops.map((barbershop) => <Card navigate={navigate} key={barbershop.id} barbershop={barbershop}/>);
+    const renderBarbershops = searchedBarbershops.map((barbershop) => <Card navigate={navigate} key={barbershop.id} barbershop={barbershop} context={{search, setIsSearch}}/>);
 
     return (
         <>

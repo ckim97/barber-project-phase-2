@@ -1,9 +1,10 @@
 .navbar{
     width: 100vw;
-    margin: 0;
+    margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 5px;
   }
 
 .navbar > a {
@@ -21,7 +22,7 @@
     color: black;
     font-family: "Lucida Sans Unicode",sans-serif;
     text-align: center; /* Center text horizontally */
-    
+
 }
   
 a.active {
