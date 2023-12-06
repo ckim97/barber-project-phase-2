@@ -3,6 +3,7 @@ import { useParams, useLocation } from "react-router-dom";
 import ServicesCard from "./ServicesCard";
 import Cart from "./Cart";
 import Calendar from 'react-calendar'; 
+import Times from "./Time";
 
 function Services() {
 
@@ -10,6 +11,8 @@ const [barbershopServices, setBarbershopServices] = useState({ services: {} })
 const [service, setService] = useState('');
 const [price, setPrice] = useState('');
 const [date, setDate] = useState(new Date());
+const [time, setTime] = useState(false) 
+const [event, setEvent] = useState('');
 
 const selectedDate = date.toDateString()
 
@@ -49,18 +52,27 @@ const selectedDate = date.toDateString()
             ))}
           </div>
           <div>
+
           <div className="calendar-container">
-                    <Calendar onChange={setDate} value={date}/>
+                    <Calendar onChange={setDate} value={date}  />
                 </div>
                 <div className="text-center">
                     Selected date: {selectedDate}
                 </div>
+                {time ? <div>
+                    Selected time: {event}    
+                </div> : null
+                }
 
           </div>
 
+          <div className="time-container">
+            <Times event={event} setEvent={setEvent} time={time} date={date} setTime={setTime}/>
+          </div>
+                
           <div className="cart">
             <ul>
-              <Cart service={service} price={price} barberShop={barberShop} barber={barber} selectedDate={selectedDate}/>
+              <Cart service={service} price={price} barberShop={barberShop} barber={barber} selectedDate={selectedDate} time={event}/>
             </ul>
           </div>
         </div>

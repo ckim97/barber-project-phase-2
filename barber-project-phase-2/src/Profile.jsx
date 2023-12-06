@@ -15,9 +15,9 @@ function Profile() {
           .then((data) => setUser(data));
       }, []);
       useEffect(() => {
-        fetch("http://localhost:4000/appointments/1")
+        fetch("http://localhost:4000/appointments/")
           .then((res) => res.json())
-          .then((data) => setAppointment(data));
+          .then((data) => console.log(data));
       }, []);
 
       return (
