@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <header className="header">
-        <NavBar/>
+        <NavBar isSearch={isSearch} search={search} setSearch={setSearch}/>
       </header>
       <main className="container">
         <h1>Slice</h1>  

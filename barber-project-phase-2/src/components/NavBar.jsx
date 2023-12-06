@@ -5,16 +5,17 @@ import "./NavBar.css";
 
 
 /* define the NavBar component */
-function NavBar() {
+function NavBar({isSearch, search, setSearch}) {
   return (
     <nav className="navbar">
       <NavLink to="/home" className="nav-link">Slice</NavLink>
-      <div>
+      {!isSearch ? null :
+       <div>
             <form>
-                <input type="text" placeholder="search for barbershop" name="search"></input>
+                <input type="text" placeholder="search for barbershop" name="search" value={search} onChange={(e) => setSearch(e.target.value)}></input>
                 <button>Submit</button>
             </form>
-        </div>
+        </div>}
       <NavLink to="/profile" className="nav-link">My Profile</NavLink>
 
     </nav>
