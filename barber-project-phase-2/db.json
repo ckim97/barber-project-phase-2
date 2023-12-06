@@ -403,15 +403,5 @@
       "name": "Kenneth"
     }
   ],
-  "appointments": [
-    {
-      "shop": "AmazingCuts",
-      "barber": "Albus",
-      "date": "Fri Dec 08 2023",
-      "service": "Haircut",
-      "time": "10:00 AM",
-      "state": true,
-      "id": 1
-    }
-  ]
+  "appointments": []
 }

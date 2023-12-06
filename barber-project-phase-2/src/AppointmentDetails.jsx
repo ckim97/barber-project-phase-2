@@ -1,15 +1,12 @@
-import { useEffect } from "react";
-
 function AppointmentDetails({ cart, setIsThereAppointment }) {
 
     function handleClick() {
         setIsThereAppointment(false);
 
-        useEffect(() => {
-            fetch("http://localhost:4000/appointments/1", {
-            method: 'DELETE',
-            headers: {'Content-type': 'application/json'},
-    })})
+        fetch("http://localhost:4000/appointments/1", {
+        method: 'DELETE',
+        headers: {'Content-type': 'application/json'},
+    })
     }
 
     return (
