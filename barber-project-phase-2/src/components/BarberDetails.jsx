@@ -26,7 +26,7 @@ function BarberDetails() {
 
     return (
         <div >
-        <p>Choose a Professional</p>
+        <p style={{ textAlign: 'center' }}>Choose a Professional</p>
         <main className="card-container">
             {barbers.map((barber => (
                 <BarberCard key={barber.id} barber={barber} index={barber.barbershopId} barberShop={barberShop} />

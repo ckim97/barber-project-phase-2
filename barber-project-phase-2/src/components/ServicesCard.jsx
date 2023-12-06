@@ -17,7 +17,7 @@ function ServicesCard( {serviceName, price, service, setPrice, setService, handl
   }
   
     return (
-          <li onClick={renderClick} key={serviceName}>
+          <li className="services-item" onClick={renderClick} key={serviceName}>
               {`${serviceName}: $${price}`}
           </li>
       );

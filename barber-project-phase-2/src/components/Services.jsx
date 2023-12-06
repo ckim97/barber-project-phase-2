@@ -59,19 +59,34 @@ const [price, setPrice] = useState('');
     console.log('no')
     console.log(barbershopServices.services)
     console.group('yes')
-    return (
-        <div>
+      return (
+        <div className="services-container">
+          <div className="services-list">
             <p>Select a Service:</p>
-
+            {Object.entries(barbershopServices.services).map(([serviceName, price]) => (
+              <ServicesCard handleChange={handleChange} key={serviceName} serviceName={serviceName} price={price} />
+            ))}
+          </div>
+          <div className="cart">
             <ul>
-                {Object.entries(barbershopServices.services).map(([serviceName, price]) => (
-                <ServicesCard handleChange={handleChange} key={serviceName} serviceName={serviceName} price={price} />
-                ))}
-                <Cart service={service} price={price} barberShop={barberShop} barber={barber}/>
+              <Cart service={service} price={price} barberShop={barberShop} barber={barber}/>
             </ul>
-
+          </div>
         </div>
-    )
+      );
+    
+    // return (
+    //     <div className="services-container">
+    //         <p>Select a Service:</p>
+    //         {Object.entries(barbershopServices.services).map(([serviceName, price]) => (
+    //             <ServicesCard handleChange={handleChange} key={serviceName} serviceName={serviceName} price={price} />
+    //             ))}
+    //         <ul>
+    //             <Cart service={service} price={price} barberShop={barberShop} barber={barber}/>
+    //         </ul>
+
+    //     </div>
+    // )
 }
 
 export default Services
