@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import ServicesCard from "./ServicesCard";
 import Cart from "./Cart";
-import Calendar from 'react-calendar'; 
+
 
 function Services() {
 
 const [barbershopServices, setBarbershopServices] = useState({ services: {} })
 const [service, setService] = useState('');
 const [price, setPrice] = useState('');
-const [date, setDate] = useState(new Date());
+
 
     const { id } = useParams();
 

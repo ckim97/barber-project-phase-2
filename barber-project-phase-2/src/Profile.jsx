@@ -21,12 +21,16 @@ function Profile() {
       }, []);
 
       return (
-        <div>
+        <div className="profile-container">
+          <div className="profile-item">
             <h1>Welcome</h1>
             <h1>{user.name}</h1>
+          </div>
+          <div className="profile-item">
             <p>You have an appointment at</p>
             <p>{appointment.data}</p>
             <p>{appointment.time}</p>
+          </div>
         </div>
       )
 }

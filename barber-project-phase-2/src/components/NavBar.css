@@ -1,17 +1,72 @@
-.navbar > a{
-    display: inline-block;
+.navbar{
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+.navbar > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     box-sizing: border-box;
     width: 70px;
     padding: 5px;
     margin: 0 6px 6px;
-    background: lightblue;
+    /* border: 2px solid black; */
+    /* background-color: white; */
     text-decoration: none;
-    text-align: center;
-    font-size: min(10vw, 15px) ;
+    font-size: min(10vw, 15px);
     color: black;
+    font-family: "Lucida Sans Unicode",sans-serif;
+    text-align: center; /* Center text horizontally */
+    
 }
   
 a.active {
-    background: black;
-    color: white;
+    /* background: black; */
+    color: black;
 }
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 70px;
+    padding: 5px;
+    margin: 0 6px 6px;
+    text-decoration: none;
+    font-size: min(10vw, 15px);
+    color: black;
+    font-family: "Lucida Sans Unicode", sans-serif;
+    text-align: center;
+  }
+  
+  .nav-image {
+    width: 7vw; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+    margin-right: 5px; /* Optional: Add margin to the right of the image for spacing */
+  }
+  
+  
+  
+
+  
+  /* .nav-link img {
+    width: 8vw; 
+    height: auto;
+    margin-right: 5px;
+  } */
+  
+  /* .nav-home-image {
+    width: 3px; 
+    height: auto; 
+  }
+  
+  .nav-profile-image {
+    width: 2vw; 
+    height: auto; 
+  }
+   */
