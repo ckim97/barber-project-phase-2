@@ -46,14 +46,6 @@ const [date, setDate] = useState(new Date());
               <ServicesCard handleChange={handleChange} key={serviceName} serviceName={serviceName} price={price} />
             ))}
           </div>
-          <div>
-            <div className="calendar-container">
-              <Calendar onChange={setDate} value={date}/>
-            </div>
-              <div className="text-center">
-                Selected date: {date.toDateString()}
-              </div>
-          </div>
           <div className="cart">
             <ul>
               <Cart service={service} price={price} barberShop={barberShop} barber={barber}/>
