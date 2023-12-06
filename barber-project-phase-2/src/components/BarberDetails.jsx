@@ -25,9 +25,9 @@ function BarberDetails() {
 
 
     return (
-        <div>
+        <div >
         <p>Choose a Professional</p>
-        <main className="container">
+        <main className="card-container">
             {barbers.map((barber => (
                 <BarberCard key={barber.id} barber={barber} index={barber.barbershopId} barberShop={barberShop} />
             )))}         

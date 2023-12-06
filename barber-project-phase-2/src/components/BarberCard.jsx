@@ -15,10 +15,11 @@ function BarberCard({barber, index, key, barberShop}) {
         setClickedBarber(currentBarber);
         navigate(`/barbershop/${index}/services`,{state: {clickedBarberShop: barberShop, clickedBarber: currentBarber}} )}
         return (
-            <article onClick={() => { 
+            <article className="card-item" onClick={() => { 
                 handleClick();
               }}>
                 <p>{barber.name}</p>
+                <img src={barber.image} alt={barber.name}/>
             </article>
         )
     }
