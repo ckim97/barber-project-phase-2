@@ -13,6 +13,7 @@ function Cart( {service, price, barberShop, barber, selectedDate, time} ) {
                 date: selectedDate,
                 service: service,
                 time: time,
+                state: true
             })
     })
     }

@@ -56,13 +56,13 @@ const selectedDate = date.toDateString()
           <div className="calendar-container">
                     <Calendar onChange={setDate} value={date}  />
                 </div>
-                <div className="text-center">
+                {/* <div className="text-center">
                     Selected date: {selectedDate}
                 </div>
                 {time ? <div>
                     Selected time: {event}    
                 </div> : null
-                }
+                } */}
 
           </div>
 

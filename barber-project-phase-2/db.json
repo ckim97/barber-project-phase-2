@@ -405,11 +405,12 @@
   ],
   "appointments": [
     {
-      "shop": "SuperCuts",
-      "barber": "Simon",
-      "date": "Wed Dec 06 2023",
-      "service": "",
-      "time": "09:00 AM",
+      "shop": "AmazingCuts",
+      "barber": "Albus",
+      "date": "Fri Dec 08 2023",
+      "service": "Haircut",
+      "time": "10:00 AM",
+      "state": true,
       "id": 1
     }
   ]
