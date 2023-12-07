@@ -1,5 +1,7 @@
 html {
-  font-family: "Lucida Sans Unicode",sans-serif
+  font-family: "Lucida Sans Unicode",sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body{
@@ -10,8 +12,6 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
-
 
 
 .center-container {
@@ -36,6 +36,7 @@ h1 {
   align-items: center;
 }
 
+
 .container-bg-image {
   min-height: 100vh;
   width: 100vw;
@@ -46,7 +47,9 @@ h1 {
   justify-content: center;
   align-items: center;
   background-image: url("https://cdn.discordapp.com/attachments/1169014161238401109/1182025529113710774/photo-1585747860715-2ba37e788b70.png?ex=6583320f&is=6570bd0f&hm=75a12b883f5c4babbf3908691885b7cc4cb60f9afc9320391e523480dc36bd1e&");
+  backdrop-filter: blur(100px);
 }
+
 
 .contents{
   background-color: white; /* Set a slightly different white color */
@@ -120,6 +123,14 @@ h1 {
   transform: scale(1.05);
 }
 
+
+.searchbar {
+  width:50vw;
+  height: 2vw;
+  font-size: 18x;
+  text-align: center;
+}
+
 .cart {
   width: 48%; /* Adjust the width as needed */
   text-align: center; /* Optional: Center the content within the cart */
@@ -130,9 +141,6 @@ h1 {
 .your-order {
   font-size: 5vh;
 }
-
-
-
 
 
 
@@ -186,7 +194,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px; /* Adjust as needed */
-  background-color: #f0f0f0; /* Example background color */
+  
   width: 100%;
   margin: 0; /* Remove default margin */
 }
@@ -358,8 +366,6 @@ body {
 .times {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  
-
   display: flex;
   height: 9vh;
   width: 4.5vw;
@@ -417,3 +423,16 @@ body {
 .top-cart {
   font-size: 2.3vh;
 } 
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Optional: Center the items horizontally */
+  color: white;
+}
+
+.home-page-content {
+  font-family: American Typewriter, serif;
+  font-variant: small-caps;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  
+}
