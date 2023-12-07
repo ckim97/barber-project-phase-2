@@ -5,10 +5,14 @@ import { useNavigate } from "react-router-dom";
 
 
 /* define the NavBar component */
-function NavBar({isSearch, search, setSearch}) {
+function NavBar({search, setSearch, isSearch, setIsSearch, setIsApp, setIsServices}) {
 
   const navigate = useNavigate();
+
   function handleClick() {
+    setIsSearch(false);
+    setIsServices(false);
+    setIsApp(true);
     navigate(`/`);
   }
 

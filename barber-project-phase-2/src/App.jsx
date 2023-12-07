@@ -10,8 +10,8 @@ import { Outlet } from "react-router-dom";
 function App() {
 
   const [search, setSearch] = useState("");
-  const [isSearch, setIsSearch] = useState(false);
 
+  const [isSearch, setIsSearch] = useState(false);
   const [isApp, setIsApp] = useState(true);
   const [isServices, setIsServices] = useState(false);
   
@@ -20,7 +20,7 @@ function App() {
   return (
     <>
       <header className="header">
-        <NavBar isSearch={isSearch} search={search} setSearch={setSearch}/>
+        <NavBar search={search} setSearch={setSearch} isSearch={isSearch} setIsSearch={setIsSearch} setIsApp={setIsApp} setIsServices={setIsServices}/>
       </header>
       <main className={isApp ? "container-bg-image" : "container"}>
         {/* <h1>Slice</h1>   */}
