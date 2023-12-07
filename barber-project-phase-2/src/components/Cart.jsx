@@ -1,8 +1,10 @@
 import React,{useState} from 'react'
+import { useNavigate } from "react-router-dom";
 
 
 function Cart( {at, service, price, barberShop, barber, selectedDate, time, dollarSign, setDollarSign} ) {
 
+    const navigate = useNavigate();
 
     function handleClick() {
         fetch("http://localhost:4000/appointments", {
@@ -17,6 +19,8 @@ function Cart( {at, service, price, barberShop, barber, selectedDate, time, doll
                 state: true
             })
     })
+        alert("You have successfully booked your appointment")
+        navigate(`/profile`)
     }
 
     return (
