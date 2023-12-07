@@ -80,7 +80,11 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+}
 
+.cart {
+  width: 500px;
 }
 
 .services-list {
@@ -332,17 +336,37 @@ body {
   background-color: #e6e6e6;
 }
 
+.calendar-container {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  flex-direction: column;
+}
+
 .times {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  
+
+  display: flex;
   height: 9vh;
   width: 4.5vw;
   border-radius: 50%;
   border: none;
   font-size: 1vw;
   color: black;
-  margin-bottom: 2vh;
+  /* margin-right: 1vw; */
+  margin-top: 1vw;
+  margin-left: 0.5vw;
+  /* margin-bottom: 2vh; */
+  align-items: center;
 }
 .times:hover {
   background-color: gray;
   color:white;
   box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
+
+.services-container {
+  width: 100%;
 }

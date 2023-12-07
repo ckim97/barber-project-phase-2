@@ -59,14 +59,6 @@ const selectedDate = date.toDateString()
                   <Times event={event} setEvent={setEvent} time={time} date={date} setTime={setTime}/>
                 </div>
                 </div>
-                {/* <div className="text-center">
-                    Selected date: {selectedDate}
-                </div>
-                {time ? <div>
-                    Selected time: {event}    
-                </div> : null
-                } */}
-
           </div>
 
                 
