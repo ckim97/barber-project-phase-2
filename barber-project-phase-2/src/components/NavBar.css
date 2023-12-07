@@ -5,6 +5,7 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 5px;
+    border: 10px groove black;
   }
 
 .navbar > a {

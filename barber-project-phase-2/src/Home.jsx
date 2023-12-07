@@ -16,12 +16,13 @@ function Home() {
     const [barbershops, setBarbershops] = useState([]);
     const navigate = useNavigate();
 
-    const {search, setIsSearch} = useOutletContext();
+    const {search, setIsSearch, setIsApp} = useOutletContext();
 
     console.log(search)
 
     useEffect(() => {
       setIsSearch(true)
+      setIsApp(false)
         fetch("http://localhost:4000/barbershops")
           .then(r => r.json())
           .then(data => {
