@@ -21,7 +21,7 @@ function NavBar({isSearch, search, setSearch}) {
               </form>
           </div>}
       </div>
-      <div class="right-images">
+      <div className="right-images">
         <NavLink to="/home"><img className="nav-image" src="https://cdn.discordapp.com/attachments/1169014161238401109/1182077082168213604/Image_12-6-23_at_4.50_PM.jpg?ex=65836212&is=6570ed12&hm=6b8df38ed906e1a4cdd97c31f84bd18fe7ec04009f88c0d3092e3717cd527b2f&" alt="Home"/></NavLink>
         <NavLink to="/profile" className="nav-link"><img className="nav-image" src="https://cdn-icons-png.flaticon.com/512/3106/3106773.png" alt="Profile"/></NavLink>
       </div>
