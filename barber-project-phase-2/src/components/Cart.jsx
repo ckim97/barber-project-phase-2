@@ -25,27 +25,25 @@ function Cart( {at, service, price, barberShop, barber, selectedDate, time, doll
 
     return (
         <div className="cart-items">
-            {/* <div className=""> */}
                 <h1 class="your-order">Your Order</h1>
                 <div class="top-cart">
                     <p>{barberShop}</p>
                     <p>{barber}</p>
-                    <p>{selectedDate} {at ?<p>at {time}</p> : null}</p> 
+                    <p>{selectedDate}</p>
+                    {at ?<p>at {time}</p> : null}
                     <p>{service}</p>
                 </div>
                 <div class="bottom-cart">
-                    <h2>Subtotal: ${dollarSign ? <>
-                    {price} 
-                    </>: null}</h2>
-                    {/* {dollarSign ? <>
-                    <p>${price}</p> 
-                    </>: null} */}
-                    {/* <p>{price}</p> */}
-
+                    <h2>Subtotal: {dollarSign ? <>
+                    ${price} 
+                    </> : null}</h2>                    
                 </div>
                 <button class="reserve" onClick={handleClick}>Reserve & Pay</button>
-            </div>
-        // </div>
+                
+                
+                
+         </div>
+
     )
 }
 

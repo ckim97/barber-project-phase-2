@@ -405,10 +405,10 @@
   ],
   "appointments": [
     {
-      "shop": "HairCuts",
-      "barber": "Peter",
-      "date": "Tue Dec 12 2023",
-      "service": "First Time",
+      "shop": "Flatiron Cuts",
+      "barber": "Mohammad",
+      "date": "Thu Dec 07 2023",
+      "service": "Haircut",
       "time": "10:00 AM",
       "state": true,
       "id": 1
