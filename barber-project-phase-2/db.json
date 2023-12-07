@@ -403,20 +403,5 @@
       "name": "Kenneth"
     }
   ],
-  "appointments": [
-    {
-      "shop": "SuperCuts",
-      "barber": "Max",
-      "service": "",
-      "state": true,
-      "id": 1
-    },
-    {
-      "shop": "SuperCuts",
-      "barber": "Max",
-      "service": "",
-      "state": true,
-      "id": 2
-    }
-  ]
+  "appointments": []
 }

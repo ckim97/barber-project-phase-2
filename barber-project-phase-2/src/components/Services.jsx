@@ -4,6 +4,7 @@ import ServicesCard from "./ServicesCard";
 import Cart from "./Cart";
 import Calendar from 'react-calendar';
 import { Outlet, useOutletContext } from "react-router-dom";
+import Times from "./Time";
 
 function Services() {
 
@@ -11,8 +12,12 @@ const [barbershopServices, setBarbershopServices] = useState({ services: {} })
 const [service, setService] = useState('');
 const [price, setPrice] = useState('');
 const [date, setDate] = useState(new Date());
+const [time, setTime] = useState(false);
+const [event, setEvent] = useState("");
 
 const {search, setIsSearch, setIsApp, setIsServices} = useOutletContext();
+
+const selectedDate = date.toDateString();
 
     const { id } = useParams();
 
@@ -53,13 +58,17 @@ const {search, setIsSearch, setIsApp, setIsServices} = useOutletContext();
             ))}
           </div>
           <div>
-            <div className="calendar-container">
-              <Calendar onChange={setDate} value={date}/>
-            </div>
+                
+          <div className="calendar-container">
+                    <Calendar onChange={setDate} value={date}  />
+                <div className="time-container">
+                  <Times event={event} setEvent={setEvent} time={time} date={date} setTime={setTime}/>
+                </div>
+                </div>
           </div>
           <div className="cart">
             <ul>
-              <Cart service={service} price={price} barberShop={barberShop} barber={barber}/>
+              <Cart service={service} price={price} barberShop={barberShop} barber={barber} selectedDate={selectedDate} time={event}/>
             </ul>
           </div>
         </div>
