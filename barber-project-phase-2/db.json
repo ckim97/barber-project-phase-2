@@ -403,15 +403,5 @@
       "name": "Kenneth"
     }
   ],
-  "appointments": [
-    {
-      "shop": "Flatiron Cuts",
-      "barber": "Mohammad",
-      "date": "Thu Dec 07 2023",
-      "service": "Haircut",
-      "time": "10:00 AM",
-      "state": true,
-      "id": 1
-    }
-  ]
+  "appointments": []
 }

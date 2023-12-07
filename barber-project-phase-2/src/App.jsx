@@ -27,7 +27,7 @@ function App() {
           null}
         <div className={!isServices ? "contents" : "services-contents"}>
 
-        <Outlet context={{search, setIsSearch, setIsApp, setIsServices}}/>
+        <Outlet context={{search, setSearch, setIsSearch, setIsApp, setIsServices}}/>
         </div>
       </main>
     </>

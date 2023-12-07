@@ -16,7 +16,7 @@ function Home() {
     const [barbershops, setBarbershops] = useState([]);
     const navigate = useNavigate();
 
-    const {search, setIsSearch, setIsApp, setIsServices} = useOutletContext();
+    const {search, setIsSearch, setIsApp, setIsServices, setSearch} = useOutletContext();
 
     console.log(search)
 
@@ -36,7 +36,7 @@ function Home() {
 
     const searchedBarbershops = barbershops.filter((barbershop) => barbershop.name.toLowerCase().includes(search.toLowerCase()));
 
-    const renderBarbershops = searchedBarbershops.map((barbershop) => <Card navigate={navigate} key={barbershop.id} barbershop={barbershop} context={{search, setIsSearch}}/>);
+    const renderBarbershops = searchedBarbershops.map((barbershop) => <Card navigate={navigate} key={barbershop.id} barbershop={barbershop} context={{search, setIsSearch, setSearch}}/>);
 
     return (
         <>

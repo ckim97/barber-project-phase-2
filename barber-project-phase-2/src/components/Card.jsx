@@ -8,10 +8,11 @@ function Card({barbershop, navigate}) {
 
   const [clickedBarberShop, setClickedBarberShop] = useState('');
 
-  const {search, setIsSearch} = useOutletContext();
+  const {search, setIsSearch, setSearch} = useOutletContext();
 
   function handleClick() {
     setIsSearch(false);
+    setSearch("");
     const currentName = barbershop.name;
     // console.log(currentName)
     setClickedBarberShop(currentName);
