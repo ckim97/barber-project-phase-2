@@ -18,7 +18,7 @@ function AppointmentDetails({ cart, setIsThereAppointment }) {
         <p>with</p>
         <p>{cart.barber}</p>
         <div className="cancel">
-          <button onClick={handleClick}>Cancel Appointment</button>
+          <button class="reserve" onClick={handleClick}>Cancel Appointment</button>
         </div>
       </div>
     );
