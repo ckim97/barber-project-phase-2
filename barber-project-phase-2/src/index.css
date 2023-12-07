@@ -124,6 +124,7 @@ h1 {
   text-align: center;
 }
 
+
 .card-item:hover {
   background-color: #f9f9f9; /* Change to a slightly different white on hover */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a box shadow on hover for a raised effect */
@@ -181,11 +182,11 @@ body {
 
 /* kenneth */
 .react-calendar { 
-  width: 300px;
+  width: 25vw;
   max-width: 100%;
   background-color: white(131, 125, 125);
   color: black;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.125em;
@@ -228,11 +229,11 @@ body {
 }
 .react-calendar__navigation {
   display: flex;
-  height: 44px;
+  height: 10vh;
   margin-bottom: 1em;
 }
 .react-calendar__navigation button {
-  min-width: 44px;
+  min-width: 3vw;
   /* background: none; */
 }
 .react-calendar__navigation button:enabled:hover,
@@ -309,4 +310,19 @@ body {
 }
 .react-calendar--selectRange .react-calendar__tile--hover {
   background-color: #e6e6e6;
+}
+
+.times {
+  height: 9vh;
+  width: 4.5vw;
+  border-radius: 50%;
+  border: none;
+  font-size: 1vw;
+  color: black;
+  margin-bottom: 2vh;
+}
+.times:hover {
+  background-color: gray;
+  color:white;
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
 }

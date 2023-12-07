@@ -52,9 +52,12 @@ const selectedDate = date.toDateString()
             ))}
           </div>
           <div>
-
+                
           <div className="calendar-container">
                     <Calendar onChange={setDate} value={date}  />
+                <div className="time-container">
+                  <Times event={event} setEvent={setEvent} time={time} date={date} setTime={setTime}/>
+                </div>
                 </div>
                 {/* <div className="text-center">
                     Selected date: {selectedDate}
@@ -66,9 +69,6 @@ const selectedDate = date.toDateString()
 
           </div>
 
-          <div className="time-container">
-            <Times event={event} setEvent={setEvent} time={time} date={date} setTime={setTime}/>
-          </div>
                 
           <div className="cart">
             <ul>

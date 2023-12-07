@@ -14,7 +14,7 @@ function Times({event, setEvent, setTime}) {
     <div className="times">
       {time.map((times, index) => (
         <div key={index}>
-          <button onClick={() => setTimes(times)}>{times}</button>
+          <button className="times" onClick={() => setTimes(times)}>{times}</button>
         </div>
       ))}
     </div>
