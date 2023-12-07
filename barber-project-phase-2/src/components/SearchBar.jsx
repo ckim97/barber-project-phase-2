@@ -9,8 +9,7 @@ function SearchBar({search, setSearch}) {
     return (
         <div>
             <form>
-                <input type="text" placeholder="search for barbershop" name="search" value={search} onChange={handleSearch}></input>
-                <button>Submit</button>
+                <input type="text" placeholder="search for barbershop" name="search" value={search} onChange={handleSearch} className="searchbar"></input>
             </form>
         </div>
     )

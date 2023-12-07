@@ -93,15 +93,15 @@
     },
     {
       "id": 8,
-      "name": "Hair Care",
-      "rating": "3/5",
+      "name": "Flatiron Cuts",
+      "rating": "5/5",
       "image": "https://clipart.com/thumbs.php?f=/100/batch_128/000100-0128-000478_tnb.png",
       "services": {
-        "First Time": 50,
-        "Haircut": 30,
-        "Kid's Haircut": 20,
-        "Beard Trim": 15,
-        "Haircut and Beard Trim": 40
+        "First Time": 100,
+        "Haircut": 60,
+        "Kid's Haircut": 30,
+        "Beard Trim": 20,
+        "Haircut and Beard Trim": 70
       }
     },
     {
@@ -357,7 +357,7 @@
     {
       "id": 38,
       "name": "Mohammad",
-      "image": "https://clipart.com/thumbs.php?f=/773/batch_30/000773-0030-000261_tnb.png",
+      "image": "https://avatars.githubusercontent.com/u/51182962?v=4",
       "barbershopId": 8
     },
     {

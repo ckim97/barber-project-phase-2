@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import './App.css'
-import SearchBar from "./components/SearchBar";
 import NavBar from "./components/NavBar";
-import ProfileBar from "./components/ProfileBar";
 
 import { Outlet } from "react-router-dom";
 
@@ -23,7 +20,11 @@ function App() {
         <NavBar search={search} setSearch={setSearch} isSearch={isSearch} setIsSearch={setIsSearch} setIsApp={setIsApp} setIsServices={setIsServices}/>
       </header>
       <main className={isApp ? "container-bg-image" : "container"}>
-        {/* <h1>Slice</h1>   */}
+        {isApp ? 
+        <div className="home-page">
+          <h1 className="home-page-content">"Barbershops - Where men can be men."</h1>
+          </div> :
+          null}
         <div className={!isServices ? "contents" : "services-contents"}>
 
         <Outlet context={{search, setIsSearch, setIsApp, setIsServices}}/>

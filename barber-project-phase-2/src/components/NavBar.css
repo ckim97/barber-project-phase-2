@@ -32,6 +32,7 @@
     justify-content: center;
     align-items: center;
     margin: 0px;
+    cursor: pointer;
    
   }
   
@@ -68,23 +69,3 @@ a.active {
     color: black;
 }
 
-  
-  
-
-  
-  /* .nav-link img {
-    width: 8vw; 
-    height: auto;
-    margin-right: 5px;
-  } */
-  
-  /* .nav-home-image {
-    width: 3px; 
-    height: auto; 
-  }
-  
-  .nav-profile-image {
-    width: 2vw; 
-    height: auto; 
-  }
-   */
