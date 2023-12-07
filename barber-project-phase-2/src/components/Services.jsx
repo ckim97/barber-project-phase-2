@@ -14,6 +14,8 @@ const [price, setPrice] = useState('');
 const [date, setDate] = useState(new Date());
 const [time, setTime] = useState(false);
 const [event, setEvent] = useState("");
+const [dollarSign, setDollarSign] = useState(false)
+const [at, setAt] =useState(false)
 
 const {search, setIsSearch, setIsApp, setIsServices} = useOutletContext();
 
@@ -43,6 +45,7 @@ const selectedDate = date.toDateString();
         const servicePrice = price1
         setService(serviceName);
         setPrice(servicePrice);
+        setDollarSign(true)
     }
     
     console.log('no')
@@ -62,13 +65,13 @@ const selectedDate = date.toDateString();
           <div className="calendar-container">
                     <Calendar onChange={setDate} value={date}  />
                 <div className="time-container">
-                  <Times event={event} setEvent={setEvent} time={time} date={date} setTime={setTime}/>
+                  <Times setAt={setAt} event={event} setEvent={setEvent} time={time} date={date} setTime={setTime}/>
                 </div>
                 </div>
           </div>
           <div className="cart">
             <ul>
-              <Cart service={service} price={price} barberShop={barberShop} barber={barber} selectedDate={selectedDate} time={event}/>
+              <Cart at={at} dollarSign={dollarSign} setDollarSign={setDollarSign} service={service} price={price} barberShop={barberShop} barber={barber} selectedDate={selectedDate} time={event}/>
             </ul>
           </div>
         </div>

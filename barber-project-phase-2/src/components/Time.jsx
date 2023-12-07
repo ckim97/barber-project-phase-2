@@ -3,11 +3,12 @@ import Calendar from 'react-calendar';
 
 const time = ['08:00 AM', '09:00 AM', '10:00 AM', '2:00 PM', '3:00 PM'];
 
-function Times({event, setEvent, setTime}) {
+function Times({setAt, event, setEvent, setTime}) {
 
   function setTimes(times) {
     setEvent(times);
     setTime(true);
+    setAt(true);
   }
 
   return (
