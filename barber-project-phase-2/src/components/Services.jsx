@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import ServicesCard from "./ServicesCard";
 import Cart from "./Cart";
-import Calendar from 'react-calendar'; 
-import Times from "./Time";
+import Calendar from 'react-calendar';
+import { Outlet, useOutletContext } from "react-router-dom";
 
 function Services() {
 
@@ -11,10 +11,8 @@ const [barbershopServices, setBarbershopServices] = useState({ services: {} })
 const [service, setService] = useState('');
 const [price, setPrice] = useState('');
 const [date, setDate] = useState(new Date());
-const [time, setTime] = useState(false) 
-const [event, setEvent] = useState('');
 
-const selectedDate = date.toDateString()
+const {search, setIsSearch, setIsApp, setIsServices} = useOutletContext();
 
     const { id } = useParams();
 
@@ -26,6 +24,9 @@ const selectedDate = date.toDateString()
     
 
     useEffect(() => {
+      setIsApp(false)
+      setIsServices(true)
+      setIsSearch(false)
         fetch(`http://localhost:4000/barbershops/${id}`)
           .then((res) => res.json())
           .then((data) => setBarbershopServices(data));
@@ -52,27 +53,13 @@ const selectedDate = date.toDateString()
             ))}
           </div>
           <div>
-                
-          <div className="calendar-container">
-                    <Calendar onChange={setDate} value={date}  />
-                <div className="time-container">
-                  <Times event={event} setEvent={setEvent} time={time} date={date} setTime={setTime}/>
-                </div>
-                </div>
-                {/* <div className="text-center">
-                    Selected date: {selectedDate}
-                </div>
-                {time ? <div>
-                    Selected time: {event}    
-                </div> : null
-                } */}
-
+            <div className="calendar-container">
+              <Calendar onChange={setDate} value={date}/>
+            </div>
           </div>
-
-                
           <div className="cart">
             <ul>
-              <Cart service={service} price={price} barberShop={barberShop} barber={barber} selectedDate={selectedDate} time={event}/>
+              <Cart service={service} price={price} barberShop={barberShop} barber={barber}/>
             </ul>
           </div>
         </div>
@@ -80,3 +67,4 @@ const selectedDate = date.toDateString()
 }
 
 export default Services
+

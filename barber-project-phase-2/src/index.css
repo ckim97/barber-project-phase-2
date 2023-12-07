@@ -2,6 +2,10 @@ html {
   font-family: "Lucida Sans Unicode",sans-serif
 }
 
+body{
+  margin: 0;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -33,6 +37,7 @@ h1 {
 }
 
 .container-bg-image {
+  min-height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -42,13 +47,15 @@ h1 {
 }
 
 .contents{
-  background-color: #f9f9f9; /* Set a slightly different white color */
+  background-color: white; /* Set a slightly different white color */
   width: 60vw;
   
 }
 
 
-
+.services-contents {
+  width: 75vw;
+}
 
 .profile-container {
   display: flex;

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import BarberCard from "./BarberCard";
+import { useOutletContext } from "react-router-dom";
 
 function BarberDetails() {
 
@@ -15,8 +16,13 @@ function BarberDetails() {
 
     const barberShop = location.state.bbshop;
 
+    const {search, setIsSearch, setIsApp, setIsServices} = useOutletContext();
+
     // console.log(barbers)
     useEffect(() => {
+        setIsSearch(false)
+        setIsApp(false)
+        setIsServices(false)
         fetch(`http://localhost:4000/barbershop/${id}/barbers`)
           .then((res) => res.json())
           .then((data) => setBarbers(data));

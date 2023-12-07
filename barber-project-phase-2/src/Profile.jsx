@@ -2,19 +2,23 @@ import React, { useEffect, useState } from "react";
 import { useOutletContext } from "react-router-dom";
 import AppointmentDetails from "./AppointmentDetails";
 
+
 function Profile() {
 
     const [user, setUser] = useState({})
     const [appointment, setAppointment] = useState({})
 
-    const {search, setIsSearch} = useOutletContext();
+    const {search, setIsSearch, setIsApp, setIsServices} = useOutletContext();
 
     const [cart, setCart] = useState([])
 
     const [isThereAppointment, setIsThereAppointment] = useState(false)
 
+
     useEffect(() => {
         setIsSearch(false)
+        setIsApp(false)
+        setIsServices(false)
         fetch("http://localhost:4000/users/1")
           .then((res) => res.json())
           .then((data) => setUser(data));

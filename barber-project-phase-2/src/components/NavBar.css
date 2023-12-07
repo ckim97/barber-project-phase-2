@@ -1,12 +1,34 @@
-.navbar{
+.navbar {
     width: 100vw;
     margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 5px;
+    align-items: center;
+    padding: 10px;
     border: 10px groove black;
+    background-color: white;
   }
+
+ 
+  
+  .left-image,
+  .center-image,
+  .right-images {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .left-image img,
+  .center-image img,
+  .right-images img {
+    max-width: 100%;
+    height: auto;
+    /* Add any additional styling for images */
+  }
+  
 
 .navbar > a {
     display: flex;
@@ -31,27 +53,6 @@ a.active {
     color: black;
 }
 
-.nav-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    width: 70px;
-    padding: 5px;
-    margin: 0 6px 6px;
-    text-decoration: none;
-    font-size: min(10vw, 15px);
-    color: black;
-    font-family: "Lucida Sans Unicode", sans-serif;
-    text-align: center;
-  }
-  
-  .nav-image {
-    width: 7vw; /* Adjust the width as needed */
-    height: auto; /* Maintain the aspect ratio */
-    margin-right: 5px; /* Optional: Add margin to the right of the image for spacing */
-  }
-  
   
   
 

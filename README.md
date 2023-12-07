@@ -1,1 +1,0 @@
-# barber-project-phase-2
