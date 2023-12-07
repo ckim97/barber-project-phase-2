@@ -16,12 +16,13 @@ function Home() {
     const [barbershops, setBarbershops] = useState([]);
     const navigate = useNavigate();
 
-    const {search, setIsSearch} = useOutletContext();
+    const {search, setIsSearch, setIsApp} = useOutletContext();
 
     console.log(search)
 
     useEffect(() => {
       setIsSearch(true)
+      setIsApp(false)
         fetch("http://localhost:4000/barbershops")
           .then(r => r.json())
           .then(data => {
@@ -34,7 +35,7 @@ function Home() {
 
     const searchedBarbershops = barbershops.filter((barbershop) => barbershop.name.toLowerCase().includes(search.toLowerCase()));
 
-    const renderBarbershops = searchedBarbershops.map((barbershop) => <Card navigate={navigate} key={barbershop.id} barbershop={barbershop}/>);
+    const renderBarbershops = searchedBarbershops.map((barbershop) => <Card navigate={navigate} key={barbershop.id} barbershop={barbershop} context={{search, setIsSearch}}/>);
 
     return (
         <>

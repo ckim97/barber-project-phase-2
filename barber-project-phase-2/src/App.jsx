@@ -11,6 +11,8 @@ function App() {
 
   const [search, setSearch] = useState("");
   const [isSearch, setIsSearch] = useState(false)
+
+  const [isApp, setIsApp] = useState(true)
   
   
 
@@ -19,11 +21,11 @@ function App() {
       <header className="header">
         <NavBar isSearch={isSearch} search={search} setSearch={setSearch}/>
       </header>
-      <main className="container">
-        <h1>Slice</h1>  
+      <main className={isApp ? "container-bg-image" : "container"}>
+        {/* <h1>Slice</h1>   */}
         <div className='contents'>
 
-        <Outlet context={{search, setIsSearch}}/>
+        <Outlet context={{search, setIsSearch, setIsApp}}/>
         </div>
       </main>
     </>
