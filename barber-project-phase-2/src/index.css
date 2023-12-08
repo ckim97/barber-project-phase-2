@@ -413,8 +413,10 @@ body {
 } 
 
 .bottom-cart {
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
+  margin: 0 auto;
+  margin-top: 50px;
   /* margin-top: 30vh; */
   /* bottom: 15vh;
   left: 72%;
@@ -428,8 +430,13 @@ body {
   width: 10vw;
   height: 3vw;
   margin: 0 auto;
-  margin-bottom: 15px;
- 
+  margin-bottom: 25px;
+  /* border-radius: 20px; */
+  color: rgb(0, 107, 178);
+  background-color: rgba(0, 107, 178, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  border: none
 }
 
 

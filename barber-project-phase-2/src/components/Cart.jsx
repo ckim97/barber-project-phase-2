@@ -2,9 +2,11 @@ import React,{useState} from 'react'
 import { useNavigate } from "react-router-dom";
 
 
-function Cart( {at, service, price, barberShop, barber, selectedDate, time, dollarSign, setDollarSign} ) {
+function Cart( {setPrice, at, service, price, barberShop, barber, selectedDate, time, dollarSign, setDollarSign} ) {
 
     const navigate = useNavigate();
+    const [lastClickedTip, setLastClickedTip] = useState(null);
+    const [originalPrice, setOriginalPrice] = useState(price);
 
     function handleClick() {
         fetch("http://localhost:4000/appointments", {

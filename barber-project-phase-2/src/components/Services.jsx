@@ -71,7 +71,7 @@ const selectedDate = date.toDateString();
           </div>
           <div className="cart">
             <ul>
-              <Cart at={at} dollarSign={dollarSign} setDollarSign={setDollarSign} service={service} price={price} barberShop={barberShop} barber={barber} selectedDate={selectedDate} time={event}/>
+              <Cart setPrice={setPrice} at={at} dollarSign={dollarSign} setDollarSign={setDollarSign} service={service} price={price} barberShop={barberShop} barber={barber} selectedDate={selectedDate} time={event}/>
             </ul>
           </div>
         </div>
