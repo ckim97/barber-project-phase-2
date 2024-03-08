@@ -19,7 +19,7 @@ function NavBar({search, setSearch, isSearch, setIsSearch, setIsApp, setIsServic
   return (
     <nav className="navbar">
       <div className="left-image">
-        <img onClick={handleClick} src="https://media.discordapp.net/attachments/1169014161238401109/1181996408442736842/c16be0df4d505d93821edca14a589842.png?ex=658316f0&is=6570a1f0&hm=66f5a3aa68dc232f7e9c51159aee79623e07a87c27f10430b845b5213328b248&=&format=webp&quality=lossless&width=1782&height=936" alt="Logo"/>
+        <img onClick={handleClick} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM8R7rD9Vh0d5abLZ3zUjdhvmhxyWKOytqsg&usqp=CAU" alt="Logo"/>
       </div>
       <div className="center-image">
       {!isSearch ? null :
